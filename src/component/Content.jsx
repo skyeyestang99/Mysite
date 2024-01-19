@@ -5,13 +5,24 @@ import { useState } from 'react';
 
 
 const Content = () => {
-  const [showExperience, setShowExperience] = useState(false);
-  const toggleContent = () => {
-    setShowExperience(!showExperience);
+  const [contentSection, setContentSection] = useState('introduction'); // 'introduction', 'experience', or 'skills'
+  const showExperience = () => {
+    setContentSection('experience');
+  };
+
+  const showSkills = () => {
+    setContentSection('skills');
+  };
+
+  const showIntroduction = () => {
+    setContentSection('introduction');
+  };
+  const showProject = () => {
+    setContentSection('projects');
   };
   return (
     <main>
-        {!showExperience ? (
+      {contentSection === 'introduction' &&(
         <div id="home">
         <img src={profilePic} alt="Profile" className='profile-picture'/>
         <h1>Welcome to Yizhou's Webpage</h1>
@@ -21,11 +32,15 @@ const Content = () => {
         I'm currently seeking a software engineering job where I can apply my skills, work collaboratively with a dynamic team, and build cool stuff. If you think I'd be a great addition to your team, don't hesitate to reach out!
         </p>
 
-        <button className="scroll-down-button" onClick={toggleContent}>&#8595; {/* This is a down arrow symbol */}
+        <button className="scroll-down-button" onClick={showExperience}>&#8595; {/* This is a down arrow symbol */}
         </button>
       </div>
-      ):(
+      )}
+      {contentSection === 'experience' &&(
         <div id="experience" className="experience-section">
+          <button className="scroll-up-button" onClick={showIntroduction}>
+            &#8593;
+          </button>
           <h1>Internship experience</h1>
           <h3>Dassault Systemes (Jun 2023 – Dec 2023)</h3>
           <h5>Biovia Software Engineer Intern</h5>
@@ -47,8 +62,45 @@ Firebase for email authentication</li>
             <li>Standardized a WordPress staging sites workflow, delivering a secure, Git-based solution that effectively addressed site
 bugs and minimized dependencies conflicts</li>
           </ul>
-          <button className="scroll-up-button" onClick={toggleContent}>
+      
+          <button className="scroll-down-button" onClick={showProject}>
+            &#8595;
+          </button>
+        </div>
+      )}
+      {contentSection==='projects' &&(
+        <div id="projects" className="projects-section">
+          <button className="scroll-up-button" onClick={showExperience}>
             &#8593;
+          </button>
+          <h1>Projects</h1>
+          <ul>
+            <li><a href="https://github.com/skyeyestang99/News-App-Project">Full-Stack News Aggregator</a></li>
+            <li><a href="https://github.com/skyeyestang99/ResumeGeneratorApp">Resume Generator</a></li>
+            <li><a href="https://github.com/CSE-110-Winter-2023/cse-110-project-cse-110-team-22">Social Compass Android App</a></li>
+            <li>Operating System Kernel Development </li>
+            <li><a href="https://github.com/skyeyestang99/Sudoku-Project">Sudoka Game</a></li>
+          </ul>
+
+          <button className="scroll-down-button" onClick={showSkills}>
+            &#8595;
+          </button>
+        </div>
+      )}
+      {contentSection==='skills' &&(
+        <div id="skills" className="skills-section">
+          <button className="scroll-up-button" onClick={showProject}>
+            &#8593; {/* Up arrow symbol */}
+          </button>
+          <h1>Skills</h1>
+          <ul>
+            <li>Languages: C++, Java, Python, HTML, JavaScript, Groovy, Bash, Sql</li>
+            <li>Tools: Git, Junit, GDB, XML, Gradle, Maven, Azure, SSH, Unix, Jenkins, Firebase, Vim, Valgrind, Azure SQL Database, Docker, Android Studio, Jira</li>
+            <li>Framework/Library: React.JS, Axios, Node.JS, Geb, Selenium, Spock, Robolectric, Espresso, UTAM</li>
+          </ul>
+
+          <button className="scroll-down-button" onClick={showIntroduction}>
+            &#8595; 
           </button>
         </div>
       )}

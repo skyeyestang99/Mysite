@@ -37,12 +37,12 @@ h1 {
   font-size: 2.5rem;
   color: #2c3e50;
   margin: 0 0 1rem 0; /* Ensure margin for spacing */
+  margin-top: 2rem;
   order: -1; 
 }
 
 p {
   font-size: 1rem;
-  margin: 0;
 }
   
   /* Style for the project links and other special elements */
@@ -78,7 +78,6 @@ p {
     background: transparent; /* No background */
     font-size: 2rem; /* Large font size for the arrow */
     cursor: pointer; /* Change cursor to indicate this is clickable */
-    margin-top: 2rem; /* Space above the button */
     animation: bounce-down 2s infinite; /* Apply the bounce animation for down movement */
     transition: transform 0.2s; /* Smooth transform transition for hover */
   }
@@ -99,4 +98,15 @@ p {
     60% {
       transform: translateY(15px);
     }
+  }
+
+  .experience-section, .skills-section {
+    /* Shared styles for sections */
+    animation: fadeIn 0.5s;
+  }
+  
+  /* Keyframes for fade-in animation */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }

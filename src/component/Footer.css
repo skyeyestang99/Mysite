@@ -1,22 +1,37 @@
-footer {
-  position: absolute; /* Absolute position */
-  bottom: 0; /* Align to bottom */
-  width: 100%; /* Full width */
-  padding: 1rem 0; /* Padding for aesthetics */
-  background-color: #f8f9fa; /* Match you
+.footer {
+  background-color: #f8f9fa; /* A light grey background */
+  color: #333; /* Dark text color for readability */
+  text-align: center; /* Center the footer content */
+  padding: 2rem 0; /* More padding for a taller footer */
+  font-family: Arial, sans-serif; /* Keep it consistent with the rest of the page */
 }
-  
-  footer p {
-    font-size: 1rem; /* Standard font size for footer text */
+
+.footer-content {
+  max-width: 1200px; /* Maximum width of the footer content */
+  margin: 0 auto; /* Center the footer content */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center the content vertically */
+  align-items: center; /* Center the content horizontally */
+}
+
+.footer-content p {
+  font-size: small;
+}
+
+.footer a {
+  color: #007bff; /* A nice blue color for links */
+  text-decoration: none; /* No underlines on the links */
+  transition: color 0.3s ease; /* A transition for hover effects */
+}
+
+.footer a:hover {
+  color: #0056b3; /* A darker blue on hover for a nice effect */
+}
+
+/* Responsive design adjustments if needed */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
   }
-  
-  /* Responsive design breakpoints for smaller screens could be added here */
-  @media (max-width: 768px) {
-    main {
-      padding: 0 2rem; /* Increase padding on smaller screens */
-    }
-  
-    h1 {
-      font-size: 2rem; /* Slightly smaller headings on smaller screens */
-    }
-  }
+}
