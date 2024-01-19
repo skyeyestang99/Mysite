@@ -1,0 +1,22 @@
+footer {
+  position: absolute; /* Absolute position */
+  bottom: 0; /* Align to bottom */
+  width: 100%; /* Full width */
+  padding: 1rem 0; /* Padding for aesthetics */
+  background-color: #f8f9fa; /* Match you
+}
+  
+  footer p {
+    font-size: 1rem; /* Standard font size for footer text */
+  }
+  
+  /* Responsive design breakpoints for smaller screens could be added here */
+  @media (max-width: 768px) {
+    main {
+      padding: 0 2rem; /* Increase padding on smaller screens */
+    }
+  
+    h1 {
+      font-size: 2rem; /* Slightly smaller headings on smaller screens */
+    }
+  }

@@ -1,0 +1,102 @@
+main {
+  display: flex;
+  flex-direction: column; /* Default to stacking elements vertically */
+  align-items: center; /* Center items vertically */
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  line-height: 1.6;
+  width: 100%; /* Full width */
+
+}
+
+@media (min-width: 768px) { /* Apply flex row direction for larger screens */
+  main {
+    flex-direction: row; /* Place elements side by side */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Align items in the center vertically */
+  }
+}
+
+.profile-picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-right: 2rem;
+  order: -1;
+}
+
+@media (min-width: 768px) {
+  .profile-section {
+    flex-direction: row;
+    justify-content: start; /* Align items to the start of the main */
+    align-items: center;
+  }
+}
+h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin: 0 0 1rem 0; /* Ensure margin for spacing */
+  order: -1; 
+}
+
+p {
+  font-size: 1rem;
+  margin: 0;
+}
+  
+  /* Style for the project links and other special elements */
+  a.project-link, a.email-link {
+    color: #007bff; /* Highlight color for links */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+  }
+
+  a.project-link:hover, a.email-link:hover {
+    color: #0056b3; /* Darker blue color for hover state */
+  }
+  
+
+
+  .scroll-down-button {
+    border: none; /* Remove default button border */
+    background: transparent; /* No background */
+    font-size: 2rem; /* Large font size for the arrow */
+    cursor: pointer; /* Change cursor to indicate this is clickable */
+    margin-top: 2rem; /* Space above the button */
+    animation: bounce-down 2s infinite; /* Apply the bounce animation for down movement */
+    transition: transform 0.2s; /* Smooth transform transition for hover */
+  }
+  
+  /* Hover state for the button */
+  .scroll-down-button:hover {
+    transform: scale(1.1); /* Enlarge button on hover */
+  }
+
+  .scroll-up-button {
+    border: none; /* Remove default button border */
+    background: transparent; /* No background */
+    font-size: 2rem; /* Large font size for the arrow */
+    cursor: pointer; /* Change cursor to indicate this is clickable */
+    margin-top: 2rem; /* Space above the button */
+    animation: bounce-down 2s infinite; /* Apply the bounce animation for down movement */
+    transition: transform 0.2s; /* Smooth transform transition for hover */
+  }
+  
+  /* Hover state for the button */
+  .scroll-up-button:hover {
+    transform: scale(1.1); /* Enlarge button on hover */
+  }
+  
+  /* Keyframes for the bounce-down animation */
+  @keyframes bounce-down {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(30px);
+    }
+    60% {
+      transform: translateY(15px);
+    }
+  }

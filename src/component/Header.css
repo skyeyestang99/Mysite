@@ -1,0 +1,45 @@
+
+/* Basic reset for styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif; /* or any font-family of your choice */
+  }
+  
+  header {
+    background-color: #f8f9fa; /* Light gray background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* subtle shadow to lift the header */
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center; /* center the navigation */
+    align-items: center;
+    padding: 1rem 0; /* Add some padding above and below the links */
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* Space out the links */
+  }
+  
+  nav ul li {
+    padding: 0.5rem 0; /* Add padding to the list items for a larger clickable area */
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333; /* Dark grey color for the text */
+    font-weight: 500; /* Slightly bolder font */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  nav ul li a:hover {
+    color: #007bff; /* Highlight color when hovering over links */
+  }
+  
