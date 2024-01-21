@@ -94,9 +94,9 @@ bugs and minimized dependencies conflicts</li>
           </button>
           <h1>Skills</h1>
           <ul>
-            <li>Languages: C++, Java, Python, HTML, JavaScript, Groovy, Bash, Sql</li>
-            <li>Tools: Git, Junit, GDB, XML, Gradle, Maven, Azure, SSH, Unix, Jenkins, Firebase, Vim, Valgrind, Azure SQL Database, Docker, Android Studio, Jira</li>
-            <li>Framework/Library: React.JS, Axios, Node.JS, Geb, Selenium, Spock, Robolectric, Espresso, UTAM</li>
+            <li>Languages: C++/C, Java, JavaScript, Python, Groovy, Sql, HTML, Bash</li>
+            <li>Framework/Library: React.JS, Express.JS, Axios, Node.JS, Geb, Selenium, Spock, Robolectric, Espresso, UTAM</li>
+            <li>Tools: Git, Junit, GDB, XML, Gradle, Maven, Azure, Jenkins, Firebase, Vim, Valgrind, MangoDB, Mongoose, Azure SQL Database, PostgreSQL, Docker, Jira</li>
           </ul>
 
           <button className="scroll-down-button" onClick={showIntroduction}>
